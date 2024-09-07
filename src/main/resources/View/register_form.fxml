@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="PageRegister" prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #49445EDE;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.zouk.controller.RegisterFromController">
+   <children>
+      <AnchorPane layoutX="401.0" prefHeight="477.0" prefWidth="299.0" style="-fx-background-color: #1F577FF2;">
+         <children>
+            <Text fill="WHITE" layoutX="87.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTER" wrappingWidth="118.13671875">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Text>
+            <TextField fx:id="TxtRegUserName" layoutX="35.0" layoutY="155.0" onAction="#txtGoToPassword" prefHeight="33.0" prefWidth="223.0" promptText="USER NAME" style="-fx-background-radius: 10;" />
+            <TextField fx:id="TxtRegPass" layoutX="35.0" layoutY="239.0" onAction="#txtGoToRegister" prefHeight="33.0" prefWidth="223.0" promptText="PASSWORD" style="-fx-background-radius: 10;" />
+            <JFXButton buttonType="RAISED" layoutX="91.0" layoutY="317.0" onAction="#BtnRegOnAction" prefHeight="40.0" prefWidth="118.0" style="-fx-background-color: #3c6382; -fx-background-radius: 10;" text="Register" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="23.0" fitWidth="59.0" layoutX="4.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/user.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="23.0" fitWidth="59.0" layoutX="4.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/key.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="365.0" fitWidth="349.0" layoutX="31.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/techny-signing-in-to-user-account.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="36.0" fitWidth="32.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#BtnBackOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/icons8-back-100.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

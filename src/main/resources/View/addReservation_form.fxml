@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.zouk.controller.UpdateInventoryFromController">
+   <children>
+      <Text layoutX="235.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD RESERVATION">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <TextField fx:id="TxtName" layoutX="59.0" layoutY="81.0" prefHeight="33.0" prefWidth="271.0" promptText="GUEST NAME" style="-fx-background-radius: 5;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Button layoutX="398.0" layoutY="369.0" mnemonicParsing="false" onAction="#BtnSaveOnAction" prefHeight="33.0" prefWidth="108.0" style="-fx-background-radius: 10; -fx-background-color: #2d3436;" text="Save" textFill="#fcfcfc">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="532.0" layoutY="369.0" mnemonicParsing="false" onAction="#BtnCanselOnAction" prefHeight="33.0" prefWidth="108.0" style="-fx-background-radius: 10; -fx-background-color: #2d3436;" text="Cancel" textFill="#fcfcfc">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="TxtNumberOfGuests" layoutX="59.0" layoutY="144.0" prefHeight="33.0" prefWidth="271.0" promptText="NUMBER OF GUESTS " style="-fx-background-radius: 5;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="TxtDate" layoutX="59.0" layoutY="209.0" prefHeight="33.0" prefWidth="271.0" promptText="DATE" style="-fx-background-radius: 5;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="TxtTime" layoutX="369.0" layoutY="209.0" prefHeight="33.0" prefWidth="271.0" promptText="TIME" style="-fx-background-radius: 5;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="TxtEvent" layoutX="369.0" layoutY="144.0" prefHeight="33.0" prefWidth="271.0" promptText="EVENT" style="-fx-background-radius: 5;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="TxtNoOfTickets" layoutX="371.0" layoutY="272.0" prefHeight="33.0" prefWidth="271.0" promptText="NUMBER OF TICKETS" style="-fx-background-radius: 5;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="TxtContact" layoutX="369.0" layoutY="81.0" prefHeight="33.0" prefWidth="271.0" promptText="CONTACT" style="-fx-background-radius: 5;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="TxtTableType" layoutX="59.0" layoutY="272.0" prefHeight="33.0" prefWidth="271.0" promptText="TABLE TYPE" />
+      <Line endX="217.0" layoutX="115.0" layoutY="426.0" startX="-100.0" />
+      <Line endX="217.0" layoutX="468.0" layoutY="425.0" startX="-100.0" />
+      <Text layoutX="341.0" layoutY="438.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Z">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Line endX="92.0" layoutX="130.0" layoutY="30.0" startX="-115.0" />
+      <Line endX="92.0" layoutX="592.0" layoutY="29.0" startX="-115.0" />
+   </children>
+</AnchorPane>

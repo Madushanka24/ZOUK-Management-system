@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.zouk.controller.UpdateInventoryFromController">
+   <children>
+      <Text layoutX="280.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD EVENT">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <TextField fx:id="TxtEventName" layoutX="59.0" layoutY="85.0" prefHeight="33.0" prefWidth="271.0" promptText="EVENT NAME" style="-fx-background-radius: 5;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="TxtEventDate" layoutX="371.0" layoutY="85.0" prefHeight="33.0" prefWidth="271.0" promptText="DATE" style="-fx-background-radius: 5;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="158.0" fitWidth="177.0" layoutX="59.0" layoutY="249.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../../../Downloads/images.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="406.0" layoutY="370.0" mnemonicParsing="false" onAction="#BtnSaveOnAction" prefHeight="33.0" prefWidth="108.0" style="-fx-background-radius: 10; -fx-background-color: #2d3436;" text="Save" textFill="#fcfcfc">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="534.0" layoutY="370.0" mnemonicParsing="false" onAction="#BtnCancelOnAction" prefHeight="33.0" prefWidth="108.0" style="-fx-background-radius: 10; -fx-background-color: #2d3436;" text="Cancel" textFill="#fcfcfc">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="TxtVipTicketPrice" layoutX="59.0" layoutY="143.0" prefHeight="33.0" prefWidth="271.0" promptText="VIP TICKET PRICE" style="-fx-background-radius: 5;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="TxtPlatinumTicketPrice" layoutX="371.0" layoutY="143.0" prefHeight="33.0" prefWidth="271.0" promptText="PLATINUM TICKET PRICE" style="-fx-background-radius: 5;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="TxtGuestArtist" layoutX="59.0" layoutY="201.0" prefHeight="33.0" prefWidth="271.0" promptText="GUEST ARTISTS" style="-fx-background-radius: 5;">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Line endX="213.0" layoutX="115.0" layoutY="426.0" startX="-100.0" />
+      <Line endX="213.0" layoutX="472.0" layoutY="426.0" startX="-104.0" />
+      <Text layoutX="339.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Z">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

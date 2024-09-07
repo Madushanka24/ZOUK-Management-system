@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ReservationUpdatePage" prefHeight="255.0" prefWidth="616.0" style="-fx-background-color: #ced6e0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.zouk.controller.UpdateReservationFromController">
+   <children>
+      <AnchorPane layoutX="5.0" layoutY="7.0" prefHeight="33.0" prefWidth="606.0" style="-fx-background-color: #1F577FF2;">
+         <children>
+            <Label layoutX="237.0" layoutY="8.0" text="UPDATE RESERVATION" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="TxtUpdateGuestID" layoutX="24.0" layoutY="53.0" prefHeight="33.0" prefWidth="176.0" promptText="GUEST ID" />
+      <TextField fx:id="TxtUpdatereservationName" layoutX="220.0" layoutY="53.0" prefHeight="33.0" prefWidth="176.0" promptText="NAME" />
+      <TextField fx:id="TxtUpdateReservationid" layoutX="223.0" layoutY="106.0" prefHeight="33.0" prefWidth="176.0" promptText="RESERVATION ID" />
+      <TextField fx:id="TxtUpdateReservationNumOfguest" layoutX="24.0" layoutY="106.0" prefHeight="33.0" prefWidth="176.0" promptText="NUMBER OF GUEST" />
+      <TextField fx:id="TxtUpdateReservationConatct" layoutX="419.0" layoutY="53.0" prefHeight="33.0" prefWidth="176.0" promptText="CONTACT" />
+      <TextField fx:id="TxtUpdateReservationtableId" layoutX="122.0" layoutY="157.0" prefHeight="33.0" prefWidth="176.0" promptText="TABLE ID" />
+      <TextField fx:id="TxtUpdateReservationTableType" layoutX="331.0" layoutY="157.0" prefHeight="33.0" prefWidth="176.0" promptText="TABLE TYPE" />
+      <JFXButton buttonType="RAISED" layoutX="469.0" layoutY="209.0" onAction="#BtnReservationUpdatePageCancelOnAction" prefHeight="30.0" prefWidth="126.0" style="-fx-background-color: #7F8A7DFA; -fx-background-radius: 10;" text="CANCEL" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="328.0" layoutY="209.0" onAction="#BtnReservationUpdatePageUpdateOnAction" prefHeight="30.0" prefWidth="126.0" style="-fx-background-color: #7F8A7DFA; -fx-background-radius: 10;" text="UPDATE" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <DatePicker fx:id="TxtUpdateReservationDate" layoutX="419.0" layoutY="106.0" prefHeight="33.0" prefWidth="176.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </DatePicker>
+   </children>
+</AnchorPane>

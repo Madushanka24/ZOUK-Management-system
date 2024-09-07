@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Pageinventory" prefHeight="600.0" prefWidth="769.0" style="-fx-background-radius: 20; -fx-background-color: #ced6e0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.zouk.controller.InventoryFromController">
+   <children>
+      <AnchorPane layoutY="37.0" prefHeight="200.0" prefWidth="769.0" style="-fx-background-color: #1F577FF2;">
+         <children>
+            <TextField fx:id="TxtType" layoutX="50.0" layoutY="28.0" onAction="#txtGoToQty" prefHeight="32.0" prefWidth="194.0" promptText="TYPE" style="-fx-background-radius: 10;" />
+            <TextField fx:id="TxtDescription" layoutX="290.0" layoutY="28.0" onAction="#txtGoToPrice" prefHeight="32.0" prefWidth="194.0" promptText="DESCRIPTION" style="-fx-background-radius: 10;" />
+            <TextField fx:id="TxtQty" layoutX="50.0" layoutY="84.0" onAction="#txtxGoToDescription" prefHeight="32.0" prefWidth="194.0" promptText="QTY" style="-fx-background-radius: 10;" />
+            <TextField fx:id="TxtPrice" layoutX="290.0" layoutY="84.0" onAction="#txtGoToSupName" prefHeight="32.0" prefWidth="194.0" promptText="PRICE PER UNIT" style="-fx-background-radius: 10;" />
+            <JFXButton buttonType="RAISED" layoutX="624.0" layoutY="154.0" onAction="#BtnInventorySaveOnAction" prefHeight="32.0" prefWidth="110.0" style="-fx-background-color: #273c75; -fx-background-radius: 10;" text="SAVE" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="508.0" layoutY="154.0" onAction="#BtnInventoryUpdateOnAction" prefHeight="32.0" prefWidth="110.0" style="-fx-background-color: #7F8A7DFA; -fx-background-radius: 10;" text="UPDATE" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="631.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/icons8-ok-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="515.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/icons8-update-64.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="TxtSupName" layoutX="531.0" layoutY="28.0" onAction="#txtGoToSupContact" prefHeight="32.0" prefWidth="194.0" promptText="SUPPLIER NAME" style="-fx-background-radius: 10;" />
+            <TextField fx:id="TxtSupContact" layoutX="531.0" layoutY="84.0" onAction="#txtGoToSave" prefHeight="32.0" prefWidth="194.0" promptText="SUPPLIER CONTACT" style="-fx-background-radius: 10;" />
+            <Label layoutX="50.0" layoutY="144.0" text="INVENTORY ID :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="50.0" layoutY="171.0" text="SUPPLIER ID :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="InventoryIDLabel" layoutX="176.0" layoutY="144.0" prefHeight="21.0" prefWidth="72.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="SupplierIDLabel" layoutX="176.0" layoutY="171.0" prefHeight="21.0" prefWidth="72.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="282.0" layoutY="3.0" text="INVENTORY MANAGE">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="InventoryTable" layoutX="37.0" layoutY="260.0" prefHeight="237.0" prefWidth="440.0">
+         <columns>
+            <TableColumn fx:id="TableInventoryId" prefWidth="88.0" text="Inventory ID" />
+            <TableColumn fx:id="TableType" prefWidth="88.0" text="Type" />
+            <TableColumn fx:id="TableDescription" prefWidth="88.0" text="Description" />
+            <TableColumn fx:id="TableQty" prefWidth="88.0" text="QTY" />
+            <TableColumn fx:id="TablePrice" prefWidth="88.0" text="Price per unit" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="396.0" layoutY="506.0" prefHeight="79.0" prefWidth="348.0" style="-fx-background-color: #1F577FF2; -fx-background-radius: 20;">
+         <children>
+            <JFXButton fx:id="BtninventoryDelete" buttonType="RAISED" layoutX="222.0" layoutY="24.0" onAction="#BtnDeleteOnAction" prefHeight="32.0" prefWidth="110.0" style="-fx-background-color: #b71540; -fx-background-radius: 10;" text="DELETE" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <TextField fx:id="TxtInventorySearch" layoutX="15.0" layoutY="24.0" prefHeight="32.0" prefWidth="194.0" promptText="Search" style="-fx-background-radius: 10;" />
+            <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="229.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/icons8-delete-100%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="SupplierTable" layoutX="476.0" layoutY="260.0" prefHeight="237.0" prefWidth="266.0">
+        <columns>
+          <TableColumn fx:id="TableColumnSupID" prefWidth="88.0" text="Supplier ID" />
+            <TableColumn fx:id="tableColumnSupName" prefWidth="88.0" text="Supplier Name" />
+            <TableColumn fx:id="tableCoumnSupContact" prefWidth="88.0" text="Supplier contact" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

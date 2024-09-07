@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="UpdateEventPage" prefHeight="229.0" prefWidth="616.0" style="-fx-background-color: #d1d8e0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.zouk.controller.UpdateEventFromController">
+   <children>
+      <AnchorPane layoutX="5.0" layoutY="6.0" prefHeight="33.0" prefWidth="606.0" style="-fx-background-color: #1F577FF2;">
+         <children>
+            <Label layoutX="259.0" layoutY="8.0" text="UPDATE EVENT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="TxtUpdateEventID" layoutX="26.0" layoutY="67.0" prefHeight="33.0" prefWidth="176.0" promptText="EVENT ID" />
+      <TextField fx:id="TxtUpdateEventName" layoutX="220.0" layoutY="67.0" prefHeight="33.0" prefWidth="176.0" promptText="EVENT NAME" />
+      <TextField fx:id="TxtUpdateEventGuestArtist" layoutX="26.0" layoutY="118.0" prefHeight="33.0" prefWidth="176.0" promptText="GUEST ARTIST" />
+      <TextField fx:id="TxtUpdateEventVipPrice" layoutX="220.0" layoutY="118.0" prefHeight="33.0" prefWidth="176.0" promptText="VIP TICKET PRICE" />
+      <TextField fx:id="TxtUpdateEventPlatinumPrice" layoutX="415.0" layoutY="118.0" prefHeight="33.0" prefWidth="176.0" promptText="PLATINUM TICKET PRICE" />
+      <DatePicker fx:id="TxtEventDate" layoutX="415.0" layoutY="67.0" prefHeight="33.0" prefWidth="176.0" promptText="DATE" />
+      <JFXButton buttonType="RAISED" layoutX="465.0" layoutY="185.0" onAction="#BtnEventUpdatePageUpdateOnAction" prefHeight="30.0" prefWidth="126.0" style="-fx-background-color: #7F8A7DFA; -fx-background-radius: 10;" text="UPDATE" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="317.0" layoutY="185.0" onAction="#BtnEventUpdatePageCancelOnAction" prefHeight="30.0" prefWidth="126.0" style="-fx-background-color: #7F8A7DFA; -fx-background-radius: 10;" text="CANCEL" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

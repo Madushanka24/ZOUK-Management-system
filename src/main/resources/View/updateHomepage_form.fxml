@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="PageHomePageUpdate" prefHeight="209.0" prefWidth="616.0" style="-fx-background-color: #d1d8e0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.zouk.controller.UpdateHomePageFromController">
+   <children>
+      <TextField fx:id="TxtSoldTickets" layoutX="29.0" layoutY="105.0" prefHeight="33.0" prefWidth="176.0" promptText="SOLD TICKETS" />
+      <TextField fx:id="TxtTotalEvent" layoutX="220.0" layoutY="105.0" prefHeight="33.0" prefWidth="176.0" promptText="TOTAL EVENTS" />
+      <TextField fx:id="TxtTotalProfit" layoutX="410.0" layoutY="105.0" prefHeight="33.0" prefWidth="176.0" promptText="TOTAL PROFIT" />
+      <JFXButton buttonType="RAISED" layoutX="460.0" layoutY="155.0" onAction="#BtnHomePageUpdatePageUpdateOnAction" prefHeight="30.0" prefWidth="126.0" style="-fx-background-color: #7F8A7DFA; -fx-background-radius: 10;" text="UPDATE" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="323.0" layoutY="155.0" onAction="#BtnHomePageUpdatePageCancelOnAction" prefHeight="30.0" prefWidth="126.0" style="-fx-background-color: #7F8A7DFA; -fx-background-radius: 10;" text="CANCEL" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutX="5.0" layoutY="8.0" prefHeight="33.0" prefWidth="606.0" style="-fx-background-color: #1F577FF2;">
+         <children>
+            <Label layoutX="177.0" layoutY="8.0" text="UPDATE PRIVIOUS MONTH SUMMARY REPORT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="TxtID" layoutX="220.0" layoutY="54.0" prefHeight="33.0" prefWidth="176.0" promptText="SUMMARY ID" />
+   </children>
+</AnchorPane>

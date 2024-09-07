@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="StaffPage" prefHeight="600.0" prefWidth="769.0" style="-fx-background-radius: 20; -fx-background-color: #d1d8e0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.zouk.controller.StaffFromController">
+   <children>
+      <AnchorPane layoutY="37.0" prefHeight="200.0" prefWidth="769.0" style="-fx-background-color: #1F577FF2;">
+         <children>
+            <TextField fx:id="TxtStaffName" layoutX="50.0" layoutY="28.0" onAction="#txtGoToAddress" prefHeight="32.0" prefWidth="194.0" promptText="STAFF NAME" style="-fx-background-radius: 10;" />
+            <TextField fx:id="TxtAddress" layoutX="288.0" layoutY="28.0" onAction="#txtGoTOContact" prefHeight="32.0" prefWidth="194.0" promptText="ADDRESS" style="-fx-background-radius: 10;" />
+            <TextField fx:id="TxtContact" layoutX="50.0" layoutY="84.0" onAction="#txtGoToPosition" prefHeight="32.0" prefWidth="194.0" promptText="CONTACT" style="-fx-background-radius: 10;" />
+            <TextField fx:id="TxtPosition" layoutX="288.0" layoutY="84.0" onAction="#txtGoToSalary" prefHeight="32.0" prefWidth="194.0" promptText="POSITION" style="-fx-background-radius: 10;" />
+            <JFXButton buttonType="RAISED" layoutX="624.0" layoutY="154.0" onAction="#BtnStaffSaveOnAction" prefHeight="32.0" prefWidth="110.0" style="-fx-background-color: #273c75; -fx-background-radius: 10;" text="SAVE" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="508.0" layoutY="154.0" onAction="#BtnStaffUpdateOnAction" prefHeight="32.0" prefWidth="110.0" style="-fx-background-color: #7F8A7DFA; -fx-background-radius: 10;" text="UPDATE" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="631.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/icons8-ok-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="515.0" layoutY="158.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/icons8-update-64.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="TxtSalary" layoutX="521.0" layoutY="28.0" onAction="#txtGoToSave" prefHeight="32.0" prefWidth="194.0" promptText="SALARY" style="-fx-background-radius: 10;" />
+            <Label layoutX="50.0" layoutY="144.0" text="STAFF ID:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="StaffIDLabel" layoutX="125.0" layoutY="144.0" prefHeight="21.0" prefWidth="95.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="321.0" layoutY="3.0" text="STAFF MANAGE">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="StaffTable" layoutX="31.0" layoutY="260.0" prefHeight="237.0" prefWidth="707.0">
+         <columns>
+            <TableColumn fx:id="TableStaffId" prefWidth="117.0" text="Staff ID" />
+            <TableColumn fx:id="TableStaffName" prefWidth="117.0" text="Name" />
+            <TableColumn fx:id="TableStaffAddress" prefWidth="117.0" text="Address" />
+            <TableColumn fx:id="TableStaffContact" prefWidth="117.0" text="Contact" />
+            <TableColumn fx:id="TableStaffPosition" prefWidth="117.0" text="Position" />
+            <TableColumn fx:id="TableStaffSalary" prefWidth="120.0" text="Salary" />
+         </columns>
+      </TableView>
+      <AnchorPane layoutX="389.0" layoutY="508.0" prefHeight="79.0" prefWidth="348.0" style="-fx-background-color: #1F577FF2; -fx-background-radius: 20;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="222.0" layoutY="24.0" onAction="#BtnDeleteOnAction" prefHeight="32.0" prefWidth="110.0" style="-fx-background-color: #b71540; -fx-background-radius: 10;" text="DELETE" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <TextField fx:id="TxtStaffSearch" layoutX="15.0" layoutY="24.0" prefHeight="32.0" prefWidth="194.0" promptText="Search" style="-fx-background-radius: 10;" />
+            <ImageView fitHeight="25.0" fitWidth="23.0" layoutX="230.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/icons8-delete-100 (1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

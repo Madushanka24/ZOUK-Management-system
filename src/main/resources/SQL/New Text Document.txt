@@ -1,0 +1,97 @@
+
+create database zouk;
+use zouk;
+
+create table Admin(
+	name varchar(30),
+	password int(15)
+);
+        
+create table Staff(
+	id varchar(5) primary key,
+	name varchar(30) ,
+	address varchar(30),
+	contact int(12) ,
+	position varchar(20) ,
+	salary decimal(7.2)
+);
+
+create table Inventory(
+	id varchar(5) primary key,
+	type varchar(20) ,
+	price decimal(7.2) , 
+	description varchar(30) ,
+	quantity int(10)
+);
+
+create table Supplier(
+	id varchar(10) primary key,
+	name varchar(30) ,
+	contact int(12)
+);
+
+
+create table InventorySupplierDetails(
+	inventoryID varchar(5),
+	supplierID varchar(5),
+	foreign key (inventoryID) references Inventory(id) on Delete Cascade on Update Cascade,
+	foreign key (supplierID) references Supplier(id) on Delete Cascade on Update Cascade
+);
+
+
+create table Guest(
+	id varchar(10) primary key,
+	name varchar(30),
+	contact int(12)
+);
+
+create table Reservation(
+	id varchar(10) primary key,
+	date date,
+	numberOfGuests int(10),
+	guestID varchar(5),
+	foreign key (guestID) references Guest(id) on Delete Cascade on Update Cascade
+);
+
+create table Tables(
+	id varchar(10) primary key,
+	type varchar(10),
+	reservationID varchar(5),
+	foreign key (reservationID) references Reservation(id) on Delete Cascade on Update Cascade
+);
+
+create table Tickets(
+	id varchar(10) primary key,
+	vipPrice decimal(7,2),
+	platinumPrice decimal(7,2)
+);
+
+create table Event(
+	id varchar(10) primary key,
+	name varchar(25),
+	date date,
+	guestArtist varchar(25),
+	ticketID varchar(5),
+	foreign key (ticketID) references Tickets(id) on Delete Cascade on Update Cascade
+);
+
+create table GuestEventDetails(
+	guestID varchar(5),
+	eventID varchar(5),
+	foreign key (guestID) references Guest(id) on Delete Cascade on Update Cascade,
+	foreign key (eventID) references Event(id) on Delete Cascade on Update Cascade
+);
+
+create table MonthSummary(
+	id varchar(10) primary key,
+	totalProfit decimal(10,2),
+	soldTickets int(10),
+	totalEvents int(10)
+);
+
+
+	
+
+
+
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="PageUpdateStaff" prefHeight="216.0" prefWidth="616.0" style="-fx-background-color: #d1d8e0;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.zouk.controller.UpdateStaffFromController">
+   <children>
+      <AnchorPane layoutX="5.0" layoutY="7.0" prefHeight="33.0" prefWidth="606.0" style="-fx-background-color: #1F577FF2;">
+         <children>
+            <Label layoutX="261.0" layoutY="8.0" text="UPDATE STAFF" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton buttonType="RAISED" layoutX="316.0" layoutY="165.0" onAction="#BtnStaffUpdatePageUpdateOnAction" prefHeight="30.0" prefWidth="126.0" style="-fx-background-color: #7F8A7DFA; -fx-background-radius: 10;" text="UPDATE" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="459.0" layoutY="165.0" onAction="#BtnStaffUpdatePageCancelOnAction" prefHeight="30.0" prefWidth="126.0" style="-fx-background-color: #7F8A7DFA; -fx-background-radius: 10;" text="CANCEL" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="TxtUpdateAddress" layoutX="415.0" layoutY="63.0" prefHeight="33.0" prefWidth="176.0" promptText="ADDRESS" />
+      <TextField fx:id="TxtUpdateName" layoutX="220.0" layoutY="63.0" prefHeight="33.0" prefWidth="176.0" promptText="STAFF NAME" />
+      <TextField fx:id="TxtUpdateContact" layoutX="26.0" layoutY="108.0" prefHeight="33.0" prefWidth="176.0" promptText="CONTACT" />
+      <TextField fx:id="TxtUpdateSalary" layoutX="415.0" layoutY="108.0" prefHeight="33.0" prefWidth="176.0" promptText="SALARY" />
+      <TextField fx:id="TxtUpdatePosition" layoutX="220.0" layoutY="108.0" prefHeight="33.0" prefWidth="176.0" promptText="POSITION" />
+      <TextField fx:id="TxtUpdateId" layoutX="26.0" layoutY="63.0" prefHeight="33.0" prefWidth="176.0" promptText="STAFF ID" />
+   </children>
+</AnchorPane>
